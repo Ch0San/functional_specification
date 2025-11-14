@@ -6,7 +6,7 @@
   <title>유효성/에러 처리</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
-<body>
+<body class="slides spec-page">
   <header class="navbar">
     <div class="container nav-inner">
       <div class="brand"><a href="../index.html">Blog Spec</a></div>
@@ -29,18 +29,29 @@
     </div>
   </header>
 
-  <div class="hero"><div class="container"><h1>12. 유효성/에러 처리</h1><p class="muted">서버단 검증, 업로드/인증 오류 처리</p></div></div>
-  <main class="container">
-    <section>
-      <h2>요약</h2>
-      <ul>
-        <li>폼 유효성: 서버에서 필수값 검증. 댓글 수정 시 권한 위반은 쿼리 파라미터로 에러 코드 전달.</li>
-        <li>업로드 오류: 용량 초과/빈 파일 → <code>{"error":"..."}</code> 형식.</li>
-        <li>인증 오류(AJAX): 401 명시적 반환.</li>
-      </ul>
+  <main>
+    <section class="slide slide-hero">
+      <div class="container hero hero-compact">
+        <h1>12. 유효성/에러 처리</h1>
+        <p class="muted">서버단 검증, 업로드/인증 오류 처리</p>
+      </div>
+    </section>
+    <section class="slide spec-section">
+      <div class="container spec-card">
+        <h2>요약</h2>
+        <ul>
+          <li>폼 유효성: 서버에서 필수값 검증. 댓글 수정 시 권한 위반은 쿼리 파라미터로 에러 코드 전달.</li>
+          <li>업로드 오류: 용량 초과/빈 파일 → <code>{"error":"..."}</code> 형식.</li>
+          <li>인증 오류(AJAX): 401 명시적 반환.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide slide-footer">
+      <div class="container">
+        <footer class="footer">© Blog Project Spec</footer>
+      </div>
     </section>
   </main>
-  <footer class="container footer">© Blog Project Spec</footer>
 </body>
 </html>
 

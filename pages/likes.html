@@ -6,7 +6,7 @@
   <title>좋아요</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
-<body>
+<body class="slides spec-page">
   <header class="navbar">
     <div class="container nav-inner">
       <div class="brand"><a href="../index.html">Blog Spec</a></div>
@@ -29,18 +29,29 @@
     </div>
   </header>
 
-  <div class="hero"><div class="container"><h1>5. 좋아요</h1><p class="muted">게시글/댓글 좋아요 토글과 401 처리</p></div></div>
-  <main class="container">
-    <section>
-      <h2>엔드포인트</h2>
-      <ul>
-        <li>게시글: <code>POST /posts/{postId}/like</code> (인증) → <code>{ isLiked, likeCount }</code> 반환.</li>
-        <li>댓글: <code>POST /comments/{commentId}/like</code> (인증) → 카운트/텍스트 토글.</li>
-        <li>인증 실패: 401 + <code>{"message":"UNAUTHORIZED"}</code>.</li>
-      </ul>
+  <main>
+    <section class="slide slide-hero">
+      <div class="container hero hero-compact">
+        <h1>5. 좋아요</h1>
+        <p class="muted">게시글/댓글 좋아요 토글과 401 처리</p>
+      </div>
+    </section>
+    <section class="slide spec-section">
+      <div class="container spec-card">
+        <h2>엔드포인트</h2>
+        <ul>
+          <li>게시글: <code>POST /posts/{postId}/like</code> (인증) → <code>{ isLiked, likeCount }</code> 반환.</li>
+          <li>댓글: <code>POST /comments/{commentId}/like</code> (인증) → 카운트/텍스트 토글.</li>
+          <li>인증 실패: 401 + <code>{"message":"UNAUTHORIZED"}</code>.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide slide-footer">
+      <div class="container">
+        <footer class="footer">© Blog Project Spec</footer>
+      </div>
     </section>
   </main>
-  <footer class="container footer">© Blog Project Spec</footer>
 </body>
 </html>
 

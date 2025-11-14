@@ -6,7 +6,7 @@
   <title>댓글</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
-<body>
+<body class="slides spec-page">
   <header class="navbar">
     <div class="container nav-inner">
       <div class="brand"><a href="../index.html">Blog Spec</a></div>
@@ -29,20 +29,31 @@
     </div>
   </header>
 
-  <div class="hero"><div class="container"><h1>4. 댓글</h1><p class="muted">CRUD, 작성자 검증, 좋아요(AJAX)</p></div></div>
-  <main class="container">
-    <section>
-      <h2>기능</h2>
-      <ul>
-        <li>생성: <code>POST /posts/{postId}/comments</code> (인증) — 작성자는 로그인 사용자명, 완료 후 상세 리다이렉트.</li>
-        <li>수정: <code>POST /comments/{commentId}/update</code> (인증) — 본인 검증 실패 시 <code>?error=...</code> 부여.</li>
-        <li>삭제: <code>POST /comments/{commentId}/delete</code> (인증).</li>
-        <li>댓글 좋아요: <code>POST /comments/{commentId}/like</code> (인증, AJAX) — 성공 시 카운트/텍스트 토글, 401 시 로그인 안내.</li>
-        <li>메시지 표시: 상세 상단에 <code>param.success</code>/<code>param.error</code> 알림 배너.</li>
-      </ul>
+  <main>
+    <section class="slide slide-hero">
+      <div class="container hero hero-compact">
+        <h1>4. 댓글</h1>
+        <p class="muted">CRUD, 작성자 검증, 좋아요(AJAX)</p>
+      </div>
+    </section>
+    <section class="slide spec-section">
+      <div class="container spec-card">
+        <h2>기능</h2>
+        <ul>
+          <li>생성: <code>POST /posts/{postId}/comments</code> (인증) — 작성자는 로그인 사용자명, 완료 후 상세 리다이렉트.</li>
+          <li>수정: <code>POST /comments/{commentId}/update</code> (인증) — 본인 검증 실패 시 <code>?error=...</code> 부여.</li>
+          <li>삭제: <code>POST /comments/{commentId}/delete</code> (인증).</li>
+          <li>댓글 좋아요: <code>POST /comments/{commentId}/like</code> (인증, AJAX) — 성공 시 카운트/텍스트 토글, 401 시 로그인 안내.</li>
+          <li>메시지 표시: 상세 상단에 <code>param.success</code>/<code>param.error</code> 알림 배너.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide slide-footer">
+      <div class="container">
+        <footer class="footer">© Blog Project Spec</footer>
+      </div>
     </section>
   </main>
-  <footer class="container footer">© Blog Project Spec</footer>
 </body>
 </html>
 

@@ -6,7 +6,7 @@
   <title>보안/운영 고려사항</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
-<body>
+<body class="slides spec-page">
   <header class="navbar">
     <div class="container nav-inner">
       <div class="brand"><a href="../index.html">Blog Spec</a></div>
@@ -29,18 +29,29 @@
     </div>
   </header>
 
-  <div class="hero"><div class="container"><h1>13. 보안/운영 고려사항</h1><p class="muted">비밀번호 해시, 권한 경계, 공개 범위</p></div></div>
-  <main class="container">
-    <section>
-      <h2>핵심</h2>
-      <ul>
-        <li>비밀번호 해시: 운영 전환 시 BCrypt 등으로 교체.</li>
-        <li>권한 범위: 관리자 전용 라우트는 <code>hasRole('ADMIN')</code>로 보호.</li>
-        <li>공개 범위: GET 조회/정적 리소스/회원가입/로그인/비밀번호 찾기는 명시 허용.</li>
-      </ul>
+  <main>
+    <section class="slide slide-hero">
+      <div class="container hero hero-compact">
+        <h1>13. 보안/운영 고려사항</h1>
+        <p class="muted">비밀번호 해시, 권한 경계, 공개 범위</p>
+      </div>
+    </section>
+    <section class="slide spec-section">
+      <div class="container spec-card">
+        <h2>핵심</h2>
+        <ul>
+          <li>비밀번호 해시: 운영 전환 시 BCrypt 등으로 교체.</li>
+          <li>권한 범위: 관리자 전용 라우트는 <code>hasRole('ADMIN')</code>로 보호.</li>
+          <li>공개 범위: GET 조회/정적 리소스/회원가입/로그인/비밀번호 찾기는 명시 허용.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide slide-footer">
+      <div class="container">
+        <footer class="footer">© Blog Project Spec</footer>
+      </div>
     </section>
   </main>
-  <footer class="container footer">© Blog Project Spec</footer>
 </body>
 </html>
 

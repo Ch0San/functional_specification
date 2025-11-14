@@ -6,7 +6,7 @@
   <title>블로그 프로젝트 기능 설명</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body>
+<body class="slides home">
   <header class="navbar">
     <div class="container nav-inner">
       <div class="brand"><a href="index.html">Blog Spec</a></div>
@@ -29,48 +29,105 @@
     </div>
   </header>
 
-  <div class="hero">
-    <div class="container">
-      <h1>블로그 프로젝트 기능 설명</h1>
-      <p class="muted">PROJECT_SPECIFICATION.md 및 실제 구현(컨트롤러/서비스/시큐리티)을 기준으로 정리한 기능 명세 개요입니다.</p>
-    </div>
-  </div>
-
-  <main class="container">
-    <section>
-      <div class="pill"><span class="dot"></span> 버전: 초안 • 범위: 전 기능</div>
-      <h2>섹션 바로가기</h2>
-      <div class="toc">
-        <a href="pages/auth.html"><strong>1. 사용자 인증/인가</strong><br><span class="muted">로그인/로그아웃, 권한, 세션/Remember‑Me</span></a>
-        <a href="pages/members.html"><strong>2. 회원 관리</strong><br><span class="muted">가입/수정/탈퇴, 관리자 전용 관리</span></a>
-        <a href="pages/posts.html"><strong>3. 게시글(Posts)</strong><br><span class="muted">목록/검색/상세/작성/수정/삭제, 에디터/업로드</span></a>
-        <a href="pages/comments.html"><strong>4. 댓글</strong><br><span class="muted">CRUD 및 좋아요</span></a>
-        <a href="pages/likes.html"><strong>5. 좋아요</strong><br><span class="muted">게시글/댓글 토글, 401 처리</span></a>
-        <a href="pages/stories.html"><strong>6. 스토리(Stories)</strong><br><span class="muted">목록/상세/검색/작성/관리</span></a>
-        <a href="pages/notices.html"><strong>7. 공지사항</strong><br><span class="muted">목록/상세/관리</span></a>
-        <a href="pages/uploads.html"><strong>8. 파일 업로드 API</strong><br><span class="muted">이미지 업로드/임시 정리</span></a>
-        <a href="pages/analytics.html"><strong>9. 홈/방문자 집계</strong><br><span class="muted">쿠키 기반 방문 카운트, 대시보드</span></a>
-        <a href="pages/settings.html"><strong>10. 사이트 설정</strong><br><span class="muted">키‑값 설정 저장/조회</span></a>
-        <a href="pages/frontend.html"><strong>11. 프론트엔드/템플릿</strong><br><span class="muted">Thymeleaf, 정적 리소스, Kakao 지도</span></a>
-        <a href="pages/validation.html"><strong>12. 유효성/에러 처리</strong><br><span class="muted">폼 검증, 업로드/인증 오류</span></a>
-        <a href="pages/security.html"><strong>13. 보안/운영 고려</strong><br><span class="muted">비밀번호 해시, 권한/공개 범위</span></a>
+  <main>
+    <section class="slide slide-hero" id="overview">
+      <div class="container hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="pill"><span class="dot"></span> PROJECT_SPECIFICATION.md 기반</div>
+            <h1>블로그 프로젝트 기능 설명</h1>
+            <p class="muted">컨트롤러·서비스·시큐리티 구현을 기준으로 만든 전체 기능 명세를 한 화면씩 스크롤하며 살펴보세요.</p>
+            <div class="cta">
+              <a class="btn primary" href="pages/frontend.html">프론트엔드 구조</a>
+              <a class="btn ghost" href="#sections">전체 섹션 보기</a>
+            </div>
+            <div class="tagline">버전: 초안 · 범위: 전 기능 · 마지막 업데이트: 2025.11</div>
+          </div>
+          <div class="hero-panel">
+            <p class="muted">구현 범위</p>
+            <div class="stat-grid">
+              <div class="stat">
+                <span>13</span>
+                <small>세부 섹션</small>
+              </div>
+              <div class="stat">
+                <span>40+</span>
+                <small>주요 시나리오</small>
+              </div>
+              <div class="stat">
+                <span>5</span>
+                <small>도메인 모듈</small>
+              </div>
+            </div>
+            <p>인증/인가에서 대시보드 분석까지 필요한 모든 흐름을 안전한 프론트엔드와 함께 제공합니다.</p>
+          </div>
+        </div>
+        <div class="scroll-hint" aria-hidden="true">Scroll</div>
       </div>
     </section>
 
-    <section>
-      <h2>프로젝트 요약</h2>
-      <ul>
-        <li>Spring Security 기반의 세션 인증과 권한 분리(사용자/관리자).</li>
-        <li>게시글·스토리·공지 CRUD와 검색/페이징/좋아요/댓글.</li>
-        <li>인라인 이미지 업로드, 임시파일 자동 정리, 다운로드 지원.</li>
-        <li>Thymeleaf 템플릿과 정적 리소스 공개 경로 관리.</li>
-        <li>홈 대시보드에 인기/최신, 방문자 집계, 태그/소개/히어로 이미지 표시.</li>
-      </ul>
-      <p class="muted">상단 네비게이션을 이용해 각 기능의 상세를 확인하세요.</p>
+    <section class="slide slide-sections" id="sections">
+      <div class="container">
+        <div class="section-heading">
+          <h2>섹션 바로가기</h2>
+          <p class="muted">각 섹션은 실제 구현 로직을 중심으로 요약되어 있으며, 상세 페이지에서 엔드포인트·권한·에러 시나리오를 함께 제공합니다.</p>
+        </div>
+        <div class="toc">
+          <a href="pages/auth.html"><strong>1. 사용자 인증/인가</strong><br><span class="muted">로그인/로그아웃, 권한, 세션/Remember‑Me</span></a>
+          <a href="pages/members.html"><strong>2. 회원 관리</strong><br><span class="muted">가입/수정/탈퇴, 관리자 전용 관리</span></a>
+          <a href="pages/posts.html"><strong>3. 게시글(Posts)</strong><br><span class="muted">목록/검색/상세/작성/수정/삭제, 에디터/업로드</span></a>
+          <a href="pages/comments.html"><strong>4. 댓글</strong><br><span class="muted">CRUD 및 좋아요</span></a>
+          <a href="pages/likes.html"><strong>5. 좋아요</strong><br><span class="muted">게시글/댓글 토글, 401 처리</span></a>
+          <a href="pages/stories.html"><strong>6. 스토리(Stories)</strong><br><span class="muted">목록/상세/검색/작성/관리</span></a>
+          <a href="pages/notices.html"><strong>7. 공지사항</strong><br><span class="muted">목록/상세/관리</span></a>
+          <a href="pages/uploads.html"><strong>8. 파일 업로드 API</strong><br><span class="muted">이미지 업로드/임시 정리</span></a>
+          <a href="pages/analytics.html"><strong>9. 홈/방문자 집계</strong><br><span class="muted">쿠키 기반 방문 카운트, 대시보드</span></a>
+          <a href="pages/settings.html"><strong>10. 사이트 설정</strong><br><span class="muted">키‑값 설정 저장/조회</span></a>
+          <a href="pages/frontend.html"><strong>11. 프론트엔드/템플릿</strong><br><span class="muted">Thymeleaf, 정적 리소스, Kakao 지도</span></a>
+          <a href="pages/validation.html"><strong>12. 유효성/에러 처리</strong><br><span class="muted">폼 검증, 업로드/인증 오류</span></a>
+          <a href="pages/security.html"><strong>13. 보안/운영 고려</strong><br><span class="muted">비밀번호 해시, 권한/공개 범위</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-summary" id="summary">
+      <div class="container summary-grid">
+        <div>
+          <h2>프로젝트 요약</h2>
+          <ul>
+            <li>Spring Security 기반의 세션 인증과 권한 분리(사용자/관리자).</li>
+            <li>게시글·스토리·공지 CRUD와 검색/페이징/좋아요/댓글.</li>
+            <li>인라인 이미지 업로드, 임시파일 자동 정리, 다운로드 지원.</li>
+            <li>Thymeleaf 템플릿과 정적 리소스 공개 경로 관리.</li>
+            <li>홈 대시보드에 인기/최신, 방문자 집계, 태그/소개/히어로 이미지 표시.</li>
+          </ul>
+          <p class="muted">상단 네비게이션을 이용해 각 기능의 상세를 확인하세요.</p>
+        </div>
+        <div class="highlight-card">
+          <h3>핵심 기술 스택</h3>
+          <p>Spring Boot 3 · Security · Thymeleaf · JPA · AWS S3 업로드 구성과 대시보드용 집계 작업을 한 곳에 정리했습니다.</p>
+          <div class="badge-row">
+            <span class="badge">Security</span>
+            <span class="badge">Uploads</span>
+            <span class="badge">Dashboards</span>
+            <span class="badge">Validation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide slide-footer">
+      <div class="container footer-panel">
+        <h2>필요한 화면으로 바로 이동</h2>
+        <p class="muted">섹션 별 상세 페이지에서 API 시나리오, 파라미터, 예외 흐름을 순차적으로 설명합니다.</p>
+        <div class="cta">
+          <a class="btn primary" href="pages/posts.html">게시글 모듈 보기</a>
+          <a class="btn ghost" href="pages/security.html">보안/운영 가이드</a>
+        </div>
+        <footer class="footer">© Blog Project Spec</footer>
+      </div>
     </section>
   </main>
-
-  <footer class="container footer">© Blog Project Spec</footer>
 </body>
 </html>
 
