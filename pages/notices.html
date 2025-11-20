@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>공지사항</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <a href="../index.html" aria-label="Blog Spec">
+          <span class="brand-logo">B</span>
+          <span class="brand-text">Blog Spec</span>
+        </a>
+      </div>
+      <nav class="nav" style="margin-left:auto;" aria-label="주요 섹션">
+        <a href="../index.html">개요</a>
+        <a href="auth.html">인증/인가</a>
+        <a href="members.html">회원</a>
+        <a href="posts.html">게시글</a>
+        <a href="comments.html">댓글</a>
+        <a href="likes.html">좋아요</a>
+        <a href="stories.html">스토리</a>
+        <a class="active" href="notices.html">공지</a>
+        <a href="uploads.html">업로드 API</a>
+        <a href="analytics.html">홈/방문자</a>
+        <a href="settings.html">사이트 설정</a>
+        <a href="frontend.html">프론트엔드</a>
+        <a href="validation.html">유효성/에러</a>
+        <a href="security.html">보안/운영</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero hero-with-image">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <h1>7. 공지사항</h1>
+        <p class="muted">조회는 익명, 관리는 관리자 전용</p>
+      </div>
+      <figure class="hero-figure image-cycle" aria-live="polite">
+        <img class="hero-image is-active" src="../docs/images/공지사항1.png" alt="공지사항 목록 화면" loading="lazy" />
+        <img class="hero-image" src="../docs/images/공지사항2.png" alt="공지사항 등록 화면" loading="lazy" />
+        <button type="button" class="cycle-indicator" aria-label="공지 이미지 바꾸기">다음 이미지</button>
+      </figure>
+    </div>
+  </div>
+  <main class="container">
+    <section class="spec-card">
+      <h2>기능</h2>
+      <ul>
+        <li>조회: 목록/상세 — 익명 허용.</li>
+        <li>작성/수정/삭제: 관리자만 가능.</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="container footer">© Blog Project Spec</footer>
+
+  <script src='../assets/nav-scroll.js'></script>
+  <script src="../assets/spec-reveal.js"></script>
+</body>
+</html>
+
+
+
+
+
